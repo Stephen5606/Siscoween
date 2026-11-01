@@ -1,60 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sisc'o'Ween</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class="logo">
-        <img src="" alt="logo-siscoween">
-        </div>
-        <div class="nav-link">
-            <ul>
+<html lang="ro">
+    <head>
+        <meta charset="UTF-8">
+        <title>Sisc'o'ween</title>
+        <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <header id="home">
+            <h1>Sisc'o'ween</h1>
+        </header>
+
+        <nav>
+            <ul class="nav-list">
                 <li><a href="#home">Home</a></li>
-                 <li><a href="#about">About</a></li>
-                 <li><a href="#echipa">Echipa</a></li>
-                  <li><a href="#galerie">Galerie</a></li>
-                   <li><a href="#parteneri">Parteneri</a></li>
-                   <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#echipa">Echipa</a></li>
+                <li><a href="#galerie">Galerie</a></li>
+                <li><a href="#parteneri">Parteneri</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
+        </nav>
+
+        <div class="main">
+
+            
+            <div class="sectiune" id="about">
+                <h2>Despre proiect</h2>
+                <div class="linebreak"></div>
+                <div class="descriere-box">
+                    <div class="postit galben">
+                        <p>Descriere 1</p>
+                    </div>
+                    <img class="contur rosu" src="" alt="">
+                    <img class="contur verde" src="" alt="  ">
+                    <div class="postit roz">
+                        <p>Descriere 2</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Echipa -->
+            <div class="sectiune" id="echipa">
+                <h2>Echipa</h2>
+                <div class="linebreak"></div>
+                <div class="echipa-box">
+                    <div class="membru">
+                        <img src="" alt="">
+                        <div class="info">
+                            <b>Nume Prenume</b>
+                            <br>Vârsta: 17
+                            <br>Rol: Coordonator
+                        </div>
+                    </div>
+                    <div class="membru">
+                        <img src="" alt="">
+                        <div class="info">
+                            <b>Nume Prenume</b>
+                            <br>Vârsta: 16
+                            <br>Rol: Designer
+                        </div>
+                    </div>
+                    <div class="membru">
+                        <img src="" alt="">
+                        <div class="info">
+                            <b>Nume Prenume</b>
+                            <br>Vârsta: 17
+                            <br>Rol: Organizator
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="sectiune" id="galerie">
+                <h2>Galerie</h2>
+                <div class="linebreak"></div>
+            </div>
+
+            
+            <div class="sectiune" id="contact">
+                <h2>Înscriere</h2>
+                <div class="linebreak"></div>
+                <div class="contact">
+                    <form id="formular">
+                        <label>Nume
+                            <input type="text" id="nume" name="nume" required>
+                        </label>
+                        <label>Prenume
+                            <input type="text" id="prenume" name="prenume" required>
+                        </label>
+                        <label>Număr de telefon
+                            <input type="text" id="telefon" name="telefon" required>
+                        </label>
+                        <label>Email
+                            <input type="text" id="email" name="email" required>
+                        </label>
+                        <label>De unde ai aflat de noi?
+                            <select id="sursa" name="sursa" required>
+                                <option value="">-- alege --</option>
+                                <option>Instagram</option>
+                                <option>TikTok</option>
+                                <option>Facebook</option>
+                                <option>Prieteni</option>
+                                <option>Facultate</option>
+                                <option>Altele</option>
+                            </select>
+                        </label>
+                        <label>Ce ți se pare cel mai interesant din proiect/eveniment?
+                            <textarea id="interes" name="interes" rows="4"></textarea>
+                        </label>
+                        <p id="mesaj"></p>
+                        <button type="submit">Înscrie-te!</button>
+                    </form>
+                    <img class="" src="" alt="">
+                </div>
+            </div>
+
+            
+            <div class="sectiune" id="parteneri">
+                <h2>Parteneri</h2>
+                <div class="linebreak"></div>
+            </div>
+
         </div>
-    </header>
-    <main>
-        <div id="home">
-            <article>
-            <h1>Sisc'o'Ween</h1>
-            <p>Powered by <b>2gether</b></p>
-            </article>
-        </div>
-        <div id="about"></div>
-        <div id="echipa"></div>
-        <div id="galerie"></div>
-        <div id="parteneri"></div>
-        <div id="contact">
-            <h2>Inscriere</h2>
-            <form>
-                
-                <input type="text" placeholder="Nume">
-                <input type="text">
-                <input type="number">
-                <input type="radio" class="form-radio-btn">
-                <input type="radio" class="form-radio-btn">
-                <input type="radio" class="form-radio-btn">
-                <textarea rows="10" cols="50"></textarea>
-                <button type="submit" class="submit-btn">Inscrie-te!!!</button>
-            </form>
-        </div>
-    </main>
-    <footer>
-        <div class="footer">
-            <div class="footer-content">
-      <h3>&copy; 2026 Sisc'o'Ween </h3>
-      <p>All Right Reserved.</p>
-      </div>
-      </div>
-    </footer>
-</body>
+
+        <footer>
+            <p>&copy; 2026 Siscoween. Toate drepturile rezervate.
+                <a href="#">TikTok</a>|
+                <a href="#">Instagram</a>|
+                <a href="#">Facebook</a>
+            </p>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
 </html>
