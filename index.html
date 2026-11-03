@@ -2,6 +2,7 @@
 <html lang="ro">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sisc'o'ween</title>
         <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -92,39 +93,92 @@
             <div class="sectiune" id="contact">
                 <h2>Înscriere</h2>
                 <div class="linebreak"></div>
+                <p class="inscriere-intro">De abia așteptăm să ne vedem la eveniment! Completează formularul și răspunde apoi la câteva întrebări rapide. Ne ajută să facem evenimentul pe placul tău.</p>
                 <div class="contact">
-                    <form id="formular">
+                    <form id="formular" method="post" action="#">
                         <label>Nume
-                            <input type="text" id="nume" name="nume" required>
+                            <input type="text" id="nume" name="nume" autocomplete="family-name" required>
                         </label>
                         <label>Prenume
-                            <input type="text" id="prenume" name="prenume" required>
+                            <input type="text" id="prenume" name="prenume" autocomplete="given-name" required>
                         </label>
                         <label>Număr de telefon
-                            <input type="text" id="telefon" name="telefon" required>
+                            <input type="tel" id="telefon" name="telefon" placeholder="07xx xxx xxx" autocomplete="tel" pattern="\+?[0-9\s.\-]{9,18}" title="Introdu un număr de telefon valid, de exemplu 0712 345 678" required>
                         </label>
                         <label>Email
-                            <input type="text" id="email" name="email" required>
+                            <input type="email" id="email" name="email" placeholder="nume@exemplu.ro" autocomplete="email" required>
                         </label>
-                        <label>De unde ai aflat de noi?
-                            <select id="sursa" name="sursa" required>
-                                <option value="">-- alege --</option>
-                                <option>Instagram</option>
-                                <option>TikTok</option>
-                                <option>Facebook</option>
-                                <option>Prieteni</option>
-                                <option>Facultate</option>
-                                <option>Altele</option>
-                            </select>
+                        <label class="acord">
+                            <input type="checkbox" name="acord" required>
+                            Sunt de acord cu prelucrarea datelor personale în scopul organizării evenimentului.
                         </label>
-                        <label>Ce ți se pare cel mai interesant din proiect/eveniment?
-                            <textarea id="interes" name="interes" rows="4"></textarea>
-                        </label>
-                        <p id="mesaj"></p>
                         <button type="submit">Înscrie-te!</button>
                     </form>
+                    <div id="mesaj-succes" tabindex="-1" hidden>
+                        <h3>Te-ai înscris, <span id="succes-prenume"></span>!</h3>
+                        <p>Am primit înscrierea ta. Ne vedem la Sisc'o'ween!</p>
+                    </div>
                     <img class="" src="" alt="">
                 </div>
+
+                <dialog class="popup popup-intrebare" id="popup-aflat" aria-labelledby="titlu-aflat">
+                    <form method="dialog">
+                        <div class="popup-progres"><span></span></div>
+                        <p class="popup-intro">Aproape ai terminat înscrierea!</p>
+                        <p class="popup-detalii">Mai ai câteva întrebări rapide. Răspunsurile tale ne ajută să pregătim un eveniment pe placul tău.</p>
+                        <h3 id="titlu-aflat">De unde ai aflat de noi?</h3>
+                        <div class="optiuni">
+                            <label class="optiune"><input type="radio" name="aflat" value="instagram">Instagram</label>
+                            <label class="optiune"><input type="radio" name="aflat" value="tiktok">TikTok</label>
+                            <label class="optiune"><input type="radio" name="aflat" value="facebook">Facebook</label>
+                            <label class="optiune"><input type="radio" name="aflat" value="prieteni">Prieteni</label>
+                            <label class="optiune"><input type="radio" name="aflat" value="facultate">Facultate</label>
+                            <label class="optiune"><input type="radio" name="aflat" value="altele">Altele</label>
+                        </div>
+                        <div class="popup-altele" hidden>
+                            <textarea name="aflat_altele" rows="3" placeholder="Spune-ne de unde ai aflat de noi..." disabled></textarea>
+                        </div>
+                        <div class="popup-butoane">
+                            <button type="submit" value="next" class="submit-btn">Continuă</button>
+                            <button type="submit" value="skip" class="sari-peste" formnovalidate>Sari peste</button>
+                        </div>
+                        <button type="submit" value="close" class="inchide" aria-label="Închide" formnovalidate>&times;</button>
+                    </form>
+                </dialog>
+
+                <dialog class="popup popup-intrebare" id="popup-interesant" aria-labelledby="titlu-interesant">
+                    <form method="dialog">
+                        <div class="popup-progres"><span></span></div>
+                        <h3 id="titlu-interesant">Ce ți se pare cel mai interesant din proiect/eveniment?</h3>
+                        <textarea name="interesant" rows="4" placeholder="Scrie liber, cum vrei tu..." aria-labelledby="titlu-interesant"></textarea>
+                        <div class="popup-butoane">
+                            <button type="submit" value="next" class="submit-btn">Continuă</button>
+                            <button type="submit" value="skip" class="sari-peste" formnovalidate>Sari peste</button>
+                        </div>
+                        <button type="submit" value="close" class="inchide" aria-label="Închide" formnovalidate>&times;</button>
+                    </form>
+                </dialog>
+
+                <dialog class="popup popup-intrebare" id="popup-varsta" aria-labelledby="titlu-varsta">
+                    <form method="dialog">
+                        <div class="popup-progres"><span></span></div>
+                        <h3 id="titlu-varsta">Câți ani ai?</h3>
+                        <input type="number" name="varsta" placeholder="16" min="10" max="99" aria-labelledby="titlu-varsta">
+                        <div class="popup-butoane">
+                            <button type="submit" value="next" class="submit-btn">Continuă</button>
+                            <button type="submit" value="skip" class="sari-peste" formnovalidate>Sari peste</button>
+                        </div>
+                        <button type="submit" value="close" class="inchide" aria-label="Închide" formnovalidate>&times;</button>
+                    </form>
+                </dialog>
+
+                <dialog class="popup popup-final" id="popup-final" aria-labelledby="titlu-final">
+                    <form method="dialog">
+                        <h3 id="titlu-final">Mulțumim, <span id="final-prenume"></span>!</h3>
+                        <p class="popup-text">Ne vedem la Sisc'o'ween.</p>
+                        <button type="submit" class="submit-btn">Închide</button>
+                    </form>
+                </dialog>
             </div>
 
             
