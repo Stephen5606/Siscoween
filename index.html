@@ -1,60 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sisc'o'Ween</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <div class="logo">
-        <img src="" alt="logo-siscoween">
-        </div>
-        <div class="nav-link">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                 <li><a href="#about">About</a></li>
-                 <li><a href="#echipa">Echipa</a></li>
-                  <li><a href="#galerie">Galerie</a></li>
-                   <li><a href="#parteneri">Parteneri</a></li>
-                   <li><a href="#contact">Contact</a></li>
+<html lang="ro">
+    <head>
+        <meta charset="UTF-8">
+        <title>Sisc'o'ween</title>
+        <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Frijole&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <header id="home">
+            <h1>Sisc'o'ween</h1>
+        </header>
+
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#about">About</a></li>
+                <li><a href="#echipa">Echipa</a></li>
+                <li><a href="#galerie">Galerie</a></li>
+                <li><a href="#parteneri">Parteneri</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
-        </div>
-    </header>
-    <main>
-        <div id="home">
-            <article>
-            <h1>Sisc'o'Ween</h1>
-            <p>Powered by <b>2gether</b></p>
-            </article>
-        </div>
-        <div id="about"></div>
-        <div id="echipa"></div>
-        <div id="galerie"></div>
-        <div id="parteneri"></div>
-        <div id="contact">
-            <h2>Inscriere</h2>
-            <form>
+        </nav>
+
+        <div class="main">
+
+            
+            <div class="sectiune" id="about">
+                <h2>Despre proiect</h2>
+                <div class="linebreak"></div>
+                <div class="descriere-box">
+                    <div class="postit galben">
+                        <h3>Evenimentul de Halloween</h3>
+                        <p>Un eveniment tematic dedicat atmosferei misterioase de Halloween, unde participanții se pot bucura de decorațiuni, concursuri de costume, activități interactive și surprize speciale, alături de o comunitate pasionată.</p>
+                    </div>
+                    <img class="contur rosu" src="./poze/halloween_dovleci.png" alt="dovleci haloween">
+                    <img class="contur verde" src="./poze/halloween_activitati.png" alt="activitati haloween">
+                    <div class="postit roz">
+                        <h3>Activitati si experienta</h3>
+                        <p>Participanții vor lua parte la un concurs de costume cu premii, la jocuri tematice și provocări de echipă, vor explora zonele decorate special pentru eveniment și se vor bucura de o atmosferă de Halloween completă, cu muzică, lumini și efecte-surpriză.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Echipa -->
+            <div class="sectiune" id="echipa">
+                <h2>Echipa</h2>
+                <div class="linebreak"></div>
+            
+                <div class="echipa-box">
+                    <div class="buton-left"><button><</button></div>
+                    <div class="membru">
+                        <img src="" alt="" id="profile">
+                        <div class="info">
+                            <b><span class="nume-prenume"></span></b>
+                            <br><span class="varsta">Vârsta: 17</span>
+                            <br><span class="rol">Rol: Coordonator</span>
+                        </div>
+                    </div>
+                   <div class="membru">
+                        <img src="" alt="" id="profile">
+                        <div class="info">
+                            <b><span class="nume-prenume">Nume Prenume</span></b>
+                            <br><span class="varsta">Vârsta: 17</span>
+                            <br><span class="rol">Rol: Coordonator</span>
+                        </div>
+                    </div>
+                    <div class="membru">
+                        <img src="" alt="" id="profile">
+                        <div class="info">
+                            <b><span class="nume-prenume">Nume Prenume</span></b>
+                            <br><span class="varsta">Vârsta: 17</span>
+                            <br><span class="rol">Rol: Coordonator</span>
+                        </div>
+                    </div>
+                    <div class="buton-right"><button>></button></div>
+                </div>
                 
-                <input type="text" placeholder="Nume">
-                <input type="text">
-                <input type="number">
-                <input type="radio" class="form-radio-btn">
-                <input type="radio" class="form-radio-btn">
-                <input type="radio" class="form-radio-btn">
-                <textarea rows="10" cols="50"></textarea>
-                <button type="submit" class="submit-btn">Inscrie-te!!!</button>
-            </form>
+            </div>
+
+            
+            <div class="sectiune" id="galerie">
+                <h2>Galerie</h2>
+                <div class="linebreak"></div>
+            </div>
+
+            
+            <div class="sectiune" id="contact">
+                <h2>Înscriere</h2>
+                <div class="linebreak"></div>
+                <div class="contact">
+                    <form id="formular">
+                        <label>Nume
+                            <input type="text" id="nume" name="nume" required>
+                        </label>
+                        <label>Prenume
+                            <input type="text" id="prenume" name="prenume" required>
+                        </label>
+                        <label>Număr de telefon
+                            <input type="text" id="telefon" name="telefon" required>
+                        </label>
+                        <label>Email
+                            <input type="text" id="email" name="email" required>
+                        </label>
+                        <label>De unde ai aflat de noi?
+                            <select id="sursa" name="sursa" required>
+                                <option value="">-- alege --</option>
+                                <option>Instagram</option>
+                                <option>TikTok</option>
+                                <option>Facebook</option>
+                                <option>Prieteni</option>
+                                <option>Facultate</option>
+                                <option>Altele</option>
+                            </select>
+                        </label>
+                        <label>Ce ți se pare cel mai interesant din proiect/eveniment?
+                            <textarea id="interes" name="interes" rows="4"></textarea>
+                        </label>
+                        <p id="mesaj"></p>
+                        <button type="submit">Înscrie-te!</button>
+                    </form>
+                    <img class="" src="" alt="">
+                </div>
+            </div>
+
+            
+            <div class="sectiune" id="parteneri">
+                <h2>Parteneri</h2>
+                <div class="linebreak"></div>
+            </div>
+
         </div>
-    </main>
-    <footer>
-        <div class="footer">
-            <div class="footer-content">
-      <h3>&copy; 2026 Sisc'o'Ween </h3>
-      <p>All Right Reserved.</p>
-      </div>
-      </div>
-    </footer>
-</body>
+
+        <footer>
+            <p>&copy; 2026 Siscoween. Toate drepturile rezervate. </p>
+            <div class="svg">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="instagram-icon" style="color:#ff7518">
+  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+</svg></a>
+<a href="#"><svg xmlns="http://w3.org" width="50" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon tiktok-icon"  style="color:#ff7518">
+  <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path>
+</svg></a>
+<a href="#"><svg xmlns="http://w3.org" width="50" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon facebook-icon"  style="color:#ff7518">
+  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+</svg></a>
+        </div>
+        </footer>
+
+        <script src="./script.js"></script>
+    </body>
 </html>
