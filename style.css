@@ -195,6 +195,8 @@ nav a:hover {
 .buton-right button:hover{
    transform:translateX(10px);
 }
+
+
 /* contact form */
 
 .contact {
@@ -249,6 +251,38 @@ input, select, textarea {
 #mesaj {
     font-weight: bold;
 }
+
+
+/* faq */
+
+.faq-box {
+    background: #2e1a3d;
+    border: 3px solid #6a2c91;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.faq-box:hover {
+    border-color: #ff7518;
+}
+
+.faq-title {
+    padding: 15px;
+    font-size: 22px;
+    font-weight: bold;
+    border-bottom: 1px dashed #6a2c91;
+}
+
+.faq-details {
+    max-height: 0;
+    padding: 0 15px;
+    transition: max-height 0.4s;
+}
+
+.faq-box:hover .faq-details {
+    max-height: 150px;
+}
+
 
 
 /* footer */
