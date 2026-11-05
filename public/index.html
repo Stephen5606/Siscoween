@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ro">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sisc'o'ween</title>
+        <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Frijole&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <header id="home">
+            <h1>Sisc'o'ween</h1>
+        </header>
+
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#about">About</a></li>
+                <li><a href="#echipa">Echipa</a></li>
+                <li><a href="#parteneri">Parteneri</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="main">
+
+            
+            <div class="sectiune" id="about">
+                <h2>Despre proiect</h2>
+                <div class="linebreak"></div>
+                <div class="descriere-box">
+                    <div class="postit galben">
+                        <h3>Evenimentul de Halloween</h3>
+                        <p>Un eveniment tematic dedicat atmosferei misterioase de Halloween, unde participanții se pot bucura de decorațiuni, concursuri de costume, activități interactive și surprize speciale, alături de o comunitate pasionată.</p>
+                    </div>
+                    <img class="contur rosu" src="./poze/halloween_dovleci.png" alt="dovleci haloween">
+                    <img class="contur verde" src="./poze/halloween_activitati.png" alt="activitati haloween">
+                    <div class="postit roz">
+                        <h3>Activitati si experienta</h3>
+                        <p>Participanții vor lua parte la un concurs de costume cu premii, la jocuri tematice și provocări de echipă, vor explora zonele decorate special pentru eveniment și se vor bucura de o atmosferă de Halloween completă, cu muzică, lumini și efecte-surpriză.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Echipa -->
+            <div class="sectiune" id="echipa">
+                <h2>Echipa</h2>
+                <div class="linebreak"></div>
+            
+                <img class="poza-echipa" src="./echipa/toata_echipa.jpeg" alt="Echipa Sisc'o'ween">
+
+                <div class="echipa-box">
+                    <div class="buton-left"><button><</button></div>
+                    <div class="membru">
+                        <img src="" alt="" id="profile">
+                        <div class="info">
+                            <b><span class="nume-prenume"></span></b>
+                            <br><span class="varsta">Vârsta: 17</span>
+                            <br><span class="rol">Rol: Coordonator</span>
+                        </div>
+                    </div>
+                   <div class="membru">
+                        <img src="" alt="" id="profile">
+                        <div class="info">
+                            <b><span class="nume-prenume">Nume Prenume</span></b>
+                            <br><span class="varsta">Vârsta: 17</span>
+                            <br><span class="rol">Rol: Coordonator</span>
+                        </div>
+                    </div>
+                    <div class="membru">
+                        <img src="" alt="" id="profile">
+                        <div class="info">
+                            <b><span class="nume-prenume">Nume Prenume</span></b>
+                            <br><span class="varsta">Vârsta: 17</span>
+                            <br><span class="rol">Rol: Coordonator</span>
+                        </div>
+                    </div>
+                    <div class="buton-right"><button>></button></div>
+                </div>
+                
+            </div>
+            
+            <div class="sectiune" id="contact">
+                <h2>Înscriere</h2>
+                <div class="linebreak"></div>
+                <p class="inscriere-intro">De abia așteptăm să ne vedem la eveniment! Completează formularul și răspunde apoi la câteva întrebări rapide. Ne ajută să facem evenimentul pe placul tău.</p>
+                <div class="contact">
+                    <div class="contact-box">
+                        <h3>Contact</h3>
+                        <p>Ai întrebări despre eveniment? Ne poți suna sau ne poți scrie.</p>
+                        <span>Telefon</span>
+                        <a href="tel:+40736126362">+40 736 126 362</a>
+                        <span>Email</span>
+                        <a href="mailto:contact@siscoween.ro">contact@siscoween.ro</a>
+                    </div>
+                    <form id="formular" method="post" action="#">
+                        <label>Nume
+                            <input type="text" id="nume" name="nume" autocomplete="family-name" required>
+                        </label>
+                        <label>Prenume
+                            <input type="text" id="prenume" name="prenume" autocomplete="given-name" required>
+                        </label>
+                        <label>Număr de telefon
+                            <input type="tel" id="telefon" name="telefon" placeholder="07xx xxx xxx" autocomplete="tel" pattern="\+?[0-9\s.\-]{9,18}" title="Introdu un număr de telefon valid, de exemplu 0712 345 678" required>
+                        </label>
+                        <label>Email
+                            <input type="email" id="email" name="email" placeholder="nume@exemplu.ro" autocomplete="email" required>
+                        </label>
+                        <label class="acord">
+                            <input type="checkbox" name="acord" required>
+                            Sunt de acord cu prelucrarea datelor personale în scopul organizării evenimentului.
+                        </label>
+                        <p id="mesaj" aria-live="polite"></p>
+                        <button type="submit">Înscrie-te!</button>
+                    </form>
+                    <div id="mesaj-succes" tabindex="-1" hidden>
+                        <h3>Te-ai înscris, <span id="succes-prenume"></span>!</h3>
+                        <p>Am primit înscrierea ta. Ne vedem la Sisc'o'ween!</p>
+                    </div>
+                </div>
+
+                <dialog class="popup popup-intrebare" id="popup-aflat" aria-labelledby="titlu-aflat">
+                    <form method="dialog">
+                        <div class="popup-progres"><span></span></div>
+                        <p class="popup-intro">Aproape ai terminat înscrierea!</p>
+                        <p class="popup-detalii">Mai ai câteva întrebări rapide. Răspunsurile tale ne ajută să pregătim un eveniment pe placul tău.</p>
+                        <h3 id="titlu-aflat">De unde ai aflat de noi?</h3>
+                        <div class="optiuni">
+                            <label class="optiune"><input type="radio" name="aflat" value="instagram">Instagram</label>
+                            <label class="optiune"><input type="radio" name="aflat" value="tiktok">TikTok</label>
+                            <label class="optiune"><input type="radio" name="aflat" value="facebook">Facebook</label>
+                            <label class="optiune"><input type="radio" name="aflat" value="prieteni">Prieteni</label>
+                            <label class="optiune"><input type="radio" name="aflat" value="facultate">Facultate</label>
+                            <label class="optiune"><input type="radio" name="aflat" value="altele">Altele</label>
+                        </div>
+                        <div class="popup-altele" hidden>
+                            <textarea name="aflat_altele" rows="3" placeholder="Spune-ne de unde ai aflat de noi..." disabled></textarea>
+                        </div>
+                        <div class="popup-butoane">
+                            <button type="submit" value="next" class="submit-btn">Continuă</button>
+                            <button type="submit" value="skip" class="sari-peste" formnovalidate>Sari peste</button>
+                        </div>
+                        <button type="submit" value="close" class="inchide" aria-label="Închide" formnovalidate>&times;</button>
+                    </form>
+                </dialog>
+
+                <dialog class="popup popup-intrebare" id="popup-interesant" aria-labelledby="titlu-interesant">
+                    <form method="dialog">
+                        <div class="popup-progres"><span></span></div>
+                        <h3 id="titlu-interesant">Ce ți se pare cel mai interesant din proiect/eveniment?</h3>
+                        <textarea name="interesant" rows="4" placeholder="Scrie liber, cum vrei tu..." aria-labelledby="titlu-interesant"></textarea>
+                        <div class="popup-butoane">
+                            <button type="submit" value="next" class="submit-btn">Continuă</button>
+                            <button type="submit" value="skip" class="sari-peste" formnovalidate>Sari peste</button>
+                        </div>
+                        <button type="submit" value="close" class="inchide" aria-label="Închide" formnovalidate>&times;</button>
+                    </form>
+                </dialog>
+
+                <dialog class="popup popup-intrebare" id="popup-varsta" aria-labelledby="titlu-varsta">
+                    <form method="dialog">
+                        <div class="popup-progres"><span></span></div>
+                        <h3 id="titlu-varsta">Câți ani ai?</h3>
+                        <input type="number" name="varsta" placeholder="16" min="10" max="99" aria-labelledby="titlu-varsta">
+                        <div class="popup-butoane">
+                            <button type="submit" value="next" class="submit-btn">Continuă</button>
+                            <button type="submit" value="skip" class="sari-peste" formnovalidate>Sari peste</button>
+                        </div>
+                        <button type="submit" value="close" class="inchide" aria-label="Închide" formnovalidate>&times;</button>
+                    </form>
+                </dialog>
+
+                <dialog class="popup popup-final" id="popup-final" aria-labelledby="titlu-final">
+                    <form method="dialog">
+                        <h3 id="titlu-final">Mulțumim, <span id="final-prenume"></span>!</h3>
+                        <p class="popup-text">Ne vedem la Sisc'o'ween.</p>
+                        <button type="submit" class="submit-btn">Închide</button>
+                    </form>
+                </dialog>
+            </div>
+
+            <!-- faq -->
+            <div class="sectiune">
+                <h2>FAQ despre eveniment</h2>
+                <div class="linebreak"></div>
+
+                <div class="faq-box">
+                    <div class="faq-title">Ce activități ne așteaptă la SiSC o’Ween?</div>
+                    <div class="faq-details">
+                        <p>Pregătește-te pentru concursuri de costume, workshopuri de sculptat dovleci, 
+                            Treasure Hunt, jocuri interactive, premii și multe alte surprize! În plus, fondurile 
+                            strânse vor susține o cauză caritabilă.
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-box">
+                    <div class="faq-title">De ce să vii la SiSC o’Ween? 🎃</div>
+                    <div class="faq-details">
+                        <p>Pentru o atmosferă de Halloween de neuitat, activități interactive, concursuri cu premii 
+                            și ocazia de a te distra alături de prieteni! 👻 În plus, fiecare contribuție susține o 
+                            cauză caritabilă, așa că poți face o faptă bună în timp ce te distrezi! 🧡
+                        </p>
+                    </div>
+                </div>
+                <div class="faq-box">
+                    <div class="faq-title">Trebuie să port costum pentru a participa? 🎭</div>
+                    <div class="faq-details">
+                        <p>Nu este obligatoriu, dar te încurajăm să intri în atmosfera de Halloween! În plus, dacă alegi 
+                            să te costumezi, poți participa la concursul de costume și ai șansa de a câștiga premii! 🎃
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="sectiune" id="parteneri">
+                <h2>Parteneri</h2>
+                <div class="linebreak"></div>
+                <div class="sponsori">
+                    <div class="principali">
+                    <h3>Principali</h3>
+                    <div class="poze">
+                    <img src="./poze/PepsiCo_logo.svg" alt="" height="100"  class="p">
+                    <img src="./poze/raiffeisen.png" alt="" height="100" class="p">
+                    <img src="./poze/mogyi_logo.png" alt="" height="100" class="p">
+                    </div></div>
+                    <div class="media">
+                        <h3>Media</h3>
+                        <div class="poze">
+                    <img src="./poze/Kiss_FM_Romania.svg" alt="" height="100" class="p" >
+                    </div>
+                </div>
+                    <div class="culturali">
+                        <h3>Culturali</h3>
+                        <div class="poze">
+                         <img src="./poze/arcub_logo.png" alt=""  class="p" height="100">
+                     <img src="./poze/Carturesti-LOGO_VERDEicons_noBG-2.png" alt="" height="100" class="p">
+                    </div>
+                    </div>
+                    <div class="entertaiment">
+                        <h3>Entertaiment</h3>
+                        <div class="poze">
+                    <img src="./poze/logo.svg" alt="" height="100" class="p">
+                     <img src="./poze/Cinema_City.svg.webp" alt="" height="100" class="p">
+                        </div>
+                </div>
+                </div>
+            </div>
+
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Siscoween. Toate drepturile rezervate. </p>
+            <div class="svg">
+                <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="instagram-icon" style="color:#ff7518">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                </a>
+                <a href="#"><svg xmlns="http://w3.org" width="50" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon tiktok-icon"  style="color:#ff7518">
+                    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"></path></svg>
+                </a>
+                <a href="#"><svg xmlns="http://w3.org" width="50" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="social-icon facebook-icon"  style="color:#ff7518">
+                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                </a>
+            </div>
+        </footer>
+
+        <script src="./script.js"></script>
+    </body>
+</html>

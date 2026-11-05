@@ -18,6 +18,12 @@ const echipa = [
         rol: "IP"
     },
     {
+        image: "./echipa/franci.jpg",
+        nume_prenume: "Francesco Strazzacappa",
+        varsta: "20",
+        rol: "IT Back End"
+    },
+    {
         image: "./echipa/alexandra.jpeg",
         nume_prenume: "Andrei Ionila",
         varsta: "19",
@@ -46,12 +52,6 @@ const echipa = [
         nume_prenume: "Alessia Iacomi",
         varsta: "18",
         rol: "HR"
-    },
-    {
-        image: "./echipa/franci.jpg",
-        nume_prenume: "Strazzacappa Francesco",
-        varsta: "20",
-        rol: "IT Back End"
     },
     {
         image: "./echipa/lavinia.jpeg",
