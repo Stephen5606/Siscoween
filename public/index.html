@@ -21,7 +21,6 @@
             <ul class="nav-list">
                 <li><a href="#about">About</a></li>
                 <li><a href="#echipa">Echipa</a></li>
-                <li><a href="#galerie">Galerie</a></li>
                 <li><a href="#parteneri">Parteneri</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -52,6 +51,8 @@
                 <h2>Echipa</h2>
                 <div class="linebreak"></div>
             
+                <img class="poza-echipa" src="./echipa/toata_echipa.jpeg" alt="Echipa Sisc'o'ween">
+
                 <div class="echipa-box">
                     <div class="buton-left"><button><</button></div>
                     <div class="membru">
@@ -82,19 +83,20 @@
                 </div>
                 
             </div>
-
-            
-            <div class="sectiune" id="galerie">
-                <h2>Galerie</h2>
-                <div class="linebreak"></div>
-            </div>
-
             
             <div class="sectiune" id="contact">
                 <h2>Înscriere</h2>
                 <div class="linebreak"></div>
                 <p class="inscriere-intro">De abia așteptăm să ne vedem la eveniment! Completează formularul și răspunde apoi la câteva întrebări rapide. Ne ajută să facem evenimentul pe placul tău.</p>
                 <div class="contact">
+                    <div class="contact-box">
+                        <h3>Contact</h3>
+                        <p>Ai întrebări despre eveniment? Ne poți suna sau ne poți scrie.</p>
+                        <span>Telefon</span>
+                        <a href="tel:+40736126362">+40 736 126 362</a>
+                        <span>Email</span>
+                        <a href="mailto:contact@siscoween.ro">contact@siscoween.ro</a>
+                    </div>
                     <form id="formular" method="post" action="#">
                         <label>Nume
                             <input type="text" id="nume" name="nume" autocomplete="family-name" required>
@@ -112,13 +114,13 @@
                             <input type="checkbox" name="acord" required>
                             Sunt de acord cu prelucrarea datelor personale în scopul organizării evenimentului.
                         </label>
+                        <p id="mesaj" aria-live="polite"></p>
                         <button type="submit">Înscrie-te!</button>
                     </form>
                     <div id="mesaj-succes" tabindex="-1" hidden>
                         <h3>Te-ai înscris, <span id="succes-prenume"></span>!</h3>
                         <p>Am primit înscrierea ta. Ne vedem la Sisc'o'ween!</p>
                     </div>
-                    <img class="" src="" alt="">
                 </div>
 
                 <dialog class="popup popup-intrebare" id="popup-aflat" aria-labelledby="titlu-aflat">
@@ -187,21 +189,29 @@
                 <div class="linebreak"></div>
 
                 <div class="faq-box">
-                    <div class="faq-title">#1 intrebare</div>
+                    <div class="faq-title">Ce activități ne așteaptă la SiSC o’Ween?</div>
                     <div class="faq-details">
-                        <p>raspuns ...</p>
+                        <p>Pregătește-te pentru concursuri de costume, workshopuri de sculptat dovleci, 
+                            Treasure Hunt, jocuri interactive, premii și multe alte surprize! În plus, fondurile 
+                            strânse vor susține o cauză caritabilă.
+                        </p>
                     </div>
                 </div>
                 <div class="faq-box">
-                    <div class="faq-title">#2 intrebare</div>
+                    <div class="faq-title">De ce să vii la SiSC o’Ween? 🎃</div>
                     <div class="faq-details">
-                        <p>raspuns ...</p>
+                        <p>Pentru o atmosferă de Halloween de neuitat, activități interactive, concursuri cu premii 
+                            și ocazia de a te distra alături de prieteni! 👻 În plus, fiecare contribuție susține o 
+                            cauză caritabilă, așa că poți face o faptă bună în timp ce te distrezi! 🧡
+                        </p>
                     </div>
                 </div>
                 <div class="faq-box">
-                    <div class="faq-title">#3 intrebare</div>
+                    <div class="faq-title">Trebuie să port costum pentru a participa? 🎭</div>
                     <div class="faq-details">
-                        <p>raspuns ...</p>
+                        <p>Nu este obligatoriu, dar te încurajăm să intri în atmosfera de Halloween! În plus, dacă alegi 
+                            să te costumezi, poți participa la concursul de costume și ai șansa de a câștiga premii! 🎃
+                        </p>
                     </div>
                 </div>
             </div>
@@ -209,6 +219,35 @@
             <div class="sectiune" id="parteneri">
                 <h2>Parteneri</h2>
                 <div class="linebreak"></div>
+                <div class="sponsori">
+                    <div class="principali">
+                    <h3>Principali</h3>
+                    <div class="poze">
+                    <img src="./poze/PepsiCo_logo.svg" alt="" height="100"  class="p">
+                    <img src="./poze/raiffeisen.png" alt="" height="100" class="p">
+                    <img src="./poze/mogyi_logo.png" alt="" height="100" class="p">
+                    </div></div>
+                    <div class="media">
+                        <h3>Media</h3>
+                        <div class="poze">
+                    <img src="./poze/Kiss_FM_Romania.svg" alt="" height="100" class="p" >
+                    </div>
+                </div>
+                    <div class="culturali">
+                        <h3>Culturali</h3>
+                        <div class="poze">
+                         <img src="./poze/arcub_logo.png" alt=""  class="p" height="100">
+                     <img src="./poze/Carturesti-LOGO_VERDEicons_noBG-2.png" alt="" height="100" class="p">
+                    </div>
+                    </div>
+                    <div class="entertaiment">
+                        <h3>Entertaiment</h3>
+                        <div class="poze">
+                    <img src="./poze/logo.svg" alt="" height="100" class="p">
+                     <img src="./poze/Cinema_City.svg.webp" alt="" height="100" class="p">
+                        </div>
+                </div>
+                </div>
             </div>
 
         </div>
