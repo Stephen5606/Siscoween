@@ -25,7 +25,7 @@ const echipa = [
     },
     {
         image: "./echipa/alexandra.jpeg",
-        nume_prenume: "Andrei Ionila",
+        nume_prenume: "Alexandra Ionila",
         varsta: "19",
         rol: "FR"
     },
